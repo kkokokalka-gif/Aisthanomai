@@ -13,6 +13,10 @@ python3 -m http.server 8000     # → http://localhost:8000
 
 Δουλεύει και με διπλό κλικ στο `index.html` (δεν υπάρχει fetch, όλα inline).
 
+**Preview:** [ζωντανή έκδοση](https://claude.ai/code/artifact/297fe074-b3bf-4594-8572-911cc7e71901)
+— ένα αρχείο με όλα inline. Στο preview δεν κατεβαίνει το `.ics` (ο viewer μπλοκάρει
+τα downloads)· στο κανονικό site δουλεύει.
+
 ---
 
 ## Δομή
