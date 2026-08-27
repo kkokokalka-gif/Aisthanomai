@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="el" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>αισθάνομαι — Ψυχολόγος & Ψυχοθεραπεύτρια</title>
+<meta name="description" content="Ψυχοθεραπεία για ενήλικες και εφήβους, online και δια ζώσης στην Αθήνα. Κλείσε ραντεβού, δες τι λέει η έρευνα και χρησιμοποίησε τα εργαλεία ηρεμίας για κρίση πανικού.">
+<meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1614" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://aisthanomai.gr/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="el_GR">
+<meta property="og:site_name" content="αισθάνομαι">
+<meta property="og:title" content="αισθάνομαι — Ψυχολόγος & Ψυχοθεραπεύτρια">
+<meta property="og:description" content="Ψυχοθεραπεία online και δια ζώσης. Ραντεβού, έρευνα, εργαλεία ηρεμίας.">
+<meta property="og:url" content="https://aisthanomai.gr/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%232f5d53'/><circle cx='16' cy='16' r='6' fill='%23faf7f2'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": "αισθάνομαι",
+  "url": "https://aisthanomai.gr/",
+  "description": "Ψυχολόγος — ψυχοθεραπεύτρια. Συνεδρίες online και δια ζώσης στην Αθήνα.",
+  "areaServed": "GR",
+  "availableLanguage": ["el", "en"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Οδός Παραδείγματος 12",
+    "addressLocality": "Αθήνα",
+    "postalCode": "10672",
+    "addressCountry": "GR"
+  },
+  "openingHours": ["Mo-Tu 10:00-20:00", "We 12:00-20:00", "Th 10:00-20:00", "Fr 10:00-16:00"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+<!-- ══ header ══════════════════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#/arxiki" data-route="arxiki">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35"/>
+        <circle cx="16" cy="16" r="9"  fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+        <circle cx="16" cy="16" r="4.2" fill="currentColor"/>
+      </svg>
+      <span>αισθάνομαι<small>ψυχοθεραπεία</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <a href="#/arxiki"      data-route="arxiki">Αρχική</a>
+      <a href="#/profil"      data-route="profil">Προφίλ</a>
+      <a href="#/ypiresies"   data-route="ypiresies">Υπηρεσίες</a>
+      <a href="#/erevna"      data-route="erevna">Έρευνα</a>
+      <a href="#/ergaleia"    data-route="ergaleia">Εργαλεία</a>
+      <a href="#/feed"        data-route="feed">Feed</a>
+      <a href="#/epikoinonia" data-route="epikoinonia">Επικοινωνία</a>
+    </nav>
+
+    <div class="header__tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Αλλαγή θέματος"></button>
+      <a class="btn" href="#/rantevou" data-route="rantevou">Κλείσε ραντεβού</a>
+      <button class="icon-btn nav-toggle" id="navToggle" aria-label="Άνοιγμα μενού">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ συρτάρι ═════════════════════════════════════════════════════════ -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Μενού">
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <strong style="font-family:var(--f-display);font-size:1.15rem">Μενού</strong>
+      <button class="icon-btn" id="drawerClose" aria-label="Κλείσιμο μενού">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <a href="#/arxiki"      data-route="arxiki">Αρχική</a>
+    <a href="#/profil"      data-route="profil">Προφίλ</a>
+    <a href="#/ypiresies"   data-route="ypiresies">Υπηρεσίες</a>
+    <a href="#/erevna"      data-route="erevna">Έρευνα</a>
+    <a href="#/ergaleia"    data-route="ergaleia">Εργαλεία ηρεμίας</a>
+    <a href="#/feed"        data-route="feed">Feed</a>
+    <a href="#/epikoinonia" data-route="epikoinonia">Επικοινωνία</a>
+    <a class="btn btn--block" href="#/rantevou" data-route="rantevou">Κλείσε ραντεβού</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ══ ΑΡΧΙΚΗ ══════════════════════════════════════════════════════════ -->
+<section class="page is-active" id="page-arxiki">
+
+  <div class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow"><span data-p-role>Ψυχολόγος · Ψυχοθεραπεύτρια</span></p>
+        <h1>Ένας σταθερός χώρος<br>για να <em>ακούσεις</em><br>τον εαυτό σου.</h1>
+        <p class="lead" id="heroIntro"></p>
+        <div class="hero__cta">
+          <a class="btn btn--lg" href="#/rantevou">Κλείσε πρώτη συνάντηση</a>
+          <a class="btn btn--lg btn--ghost" href="#/ergaleia">Χρειάζομαι ηρεμία τώρα</a>
+        </div>
+        <div class="hero__facts" id="heroFacts"></div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg class="hero__blob" viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="g1" cx="35%" cy="30%">
+              <stop offset="0%"  stop-color="var(--accent)" stop-opacity=".22"/>
+              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="196" fill="url(#g1)"/>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="var(--line-2)" stroke-width="1" opacity=".7"/>
+          <circle cx="200" cy="200" r="178" fill="none" stroke="var(--line-2)" stroke-width="1" opacity=".45"/>
+          <circle cx="200" cy="200" r="122" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".3"
+                  stroke-dasharray="3 9"/>
+        </svg>
+        <div class="hero__portrait">
+          <span>φωτογραφία<br>προφίλ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section--tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Τι προσφέρω</p>
+        <h2>Δουλεύουμε με ό,τι σε φέρνει εδώ</h2>
+        <p class="lead">Οι συνεδρίες γίνονται στο γραφείο στην Αθήνα ή διαδικτυακά — με το ίδιο πλαίσιο, την ίδια διάρκεια και την ίδια εχεμύθεια.</p>
+      </div>
+      <div class="grid grid-3" id="servicesTeaser"></div>
+      <p style="margin-top:2rem"><a class="btn btn--ghost" href="#/ypiresies">Όλες οι υπηρεσίες και οι τιμές</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="grid grid-sidebar">
+        <div>
+          <p class="eyebrow">Εργαλεία ηρεμίας</p>
+          <h2>Όταν η ανάσα γίνεται κοφτή</h2>
+          <p class="lead">Στη σελίδα των εργαλείων υπάρχει καθοδηγούμενη αναπνοή με ρυθμό, χρονόμετρο και μετρητή κύκλων, άσκηση γείωσης 5-4-3-2-1, και δύο σύντομα ερωτηματολόγια αυτοπαρατήρησης.</p>
+          <p class="small muted">Δουλεύουν χωρίς λογαριασμό, χωρίς σύνδεση στο διαδίκτυο μετά την πρώτη φόρτωση, και τίποτα από όσα γράφεις δεν φεύγει από τη συσκευή σου.</p>
+          <p style="margin-top:1.5rem"><a class="btn" href="#/ergaleia">Άνοιξε τα εργαλεία</a></p>
+        </div>
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg></div>
+          <h3>Σε κρίση πανικού</h3>
+          <p class="small muted">Δεν κινδυνεύεις. Η κρίση κορυφώνεται συνήθως σε 10 λεπτά και υποχωρεί. Κάθισε, άφησε την εκπνοή να γίνει πιο μακριά από την εισπνοή, και άσε το εργαλείο να μετράει για σένα.</p>
+          <p style="margin-top:1.25rem"><a class="btn btn--soft btn--block" href="#/ergaleia">Ξεκίνα αναπνοή</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section--tint">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Feed</p>
+        <h2>Τι μοιράζομαι αυτές τις μέρες</h2>
+        <p class="lead">Αντί για blog: σύντομα, πρακτικά κείμενα στο <a href="#" data-ig-url data-ig-handle target="_blank" rel="noopener" style="color:var(--accent);font-weight:600"></a>.</p>
+      </div>
+      <div class="feed-grid" id="feedTeaser"></div>
+      <p style="margin-top:2rem"><a class="btn btn--ghost" href="#/feed">Δες όλο το feed</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2 style="margin-bottom:.4rem">Η πρώτη συνάντηση είναι γνωριμία</h2>
+        <p>Τριάντα λεπτά, χωρίς χρέωση και χωρίς δέσμευση, για να δούμε τι σε φέρνει εδώ και αν ταιριάζουμε.</p>
+        <a class="btn btn--lg" href="#/rantevou">Κλείσε ραντεβού</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ ΠΡΟΦΙΛ ══════════════════════════════════════════════════════════ -->
+<section class="page" id="page-profil">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Προφίλ</p>
+        <h2 data-p-name>—</h2>
+        <p class="lead" data-p-role>—</p>
+        <p class="small muted" data-p-licence>—</p>
+      </div>
+
+      <div class="grid grid-sidebar">
+        <div>
+          <p class="lead">Ξεκίνησα να δουλεύω κλινικά γιατί με ενδιέφερε λιγότερο το «τι έχεις» και περισσότερο το πώς φτάσαμε εδώ — και τι μπορεί να αλλάξει από αύριο.</p>
+          <p>Στη δουλειά μου συνδυάζω τη γνωσιακή–συμπεριφοριστική προσέγγιση με μια σχεσιακή ματιά. Πρακτικά αυτό σημαίνει ότι δουλεύουμε ταυτόχρονα σε δύο επίπεδα: στα εργαλεία που χρειάζεσαι για τη σημερινή εβδομάδα, και στα μοτίβα που επαναλαμβάνονται εδώ και χρόνια.</p>
+          <p>Δεν πιστεύω στη θεραπεία ως χώρο όπου κάποιος σου λέει τι να κάνεις. Πιστεύω σε ένα πλαίσιο αρκετά σταθερό ώστε να αντέξει ό,τι κουβαλάς, και αρκετά ειλικρινές ώστε να σου πει και κάτι που δεν θέλεις να ακούσεις.</p>
+
+          <h3 style="margin-top:2.5rem">Διαπιστευτήρια & εκπαίδευση</h3>
+          <ul class="cred-list" id="credList"></ul>
+
+          <h3 style="margin-top:2rem">Μέλος σε</h3>
+          <p id="memberships" style="display:flex;flex-wrap:wrap;gap:.5rem"></p>
+
+          <div class="note" style="margin-top:2rem">
+            <strong>Εποπτεία και προσωπική θεραπεία.</strong> Κάθε περιστατικό συζητείται ανώνυμα σε τακτική εποπτεία. Είναι απαίτηση δεοντολογίας και, πρακτικά, ο λόγος που η δουλειά παραμένει καθαρή.
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Με ποια αιτήματα δουλεύω</h3>
+          <ul class="small" style="color:var(--ink-2);padding-left:1.1rem;line-height:1.9">
+            <li>Άγχος, κρίσεις πανικού, αγοραφοβία</li>
+            <li>Κατάθλιψη και επίμονη χαμηλή διάθεση</li>
+            <li>Επαγγελματική εξουθένωση</li>
+            <li>Τραύμα και μετατραυματικές αντιδράσεις</li>
+            <li>Πένθος και απώλεια</li>
+            <li>Δυσκολίες στις σχέσεις και στα όρια</li>
+            <li>Αυτοεκτίμηση και τελειοθηρία</li>
+            <li>Μεταβάσεις ζωής, μετακόμιση, χωρισμός</li>
+          </ul>
+          <hr class="divider" style="margin:1.5rem 0">
+          <h3>Πού δεν είμαι ο σωστός άνθρωπος</h3>
+          <p class="small muted">Σε ενεργή εξάρτηση, σε οξεία ψυχωτική κρίση ή όταν χρειάζεται άμεση ψυχιατρική παρακολούθηση, θα σε παραπέμψω σε συνάδελφο ή δομή με την κατάλληλη εξειδίκευση. Το να το πω έγκαιρα είναι μέρος της δουλειάς.</p>
+        </aside>
+      </div>
+
+      <h3 style="margin-top:3.5rem">Πώς δουλεύω</h3>
+      <div class="grid grid-2" id="approachGrid" style="margin-top:1.5rem"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΥΠΗΡΕΣΙΕΣ ═══════════════════════════════════════════════════════ -->
+<section class="page" id="page-ypiresies">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Υπηρεσίες</p>
+        <h2>Τι μπορούμε να κάνουμε μαζί</h2>
+        <p class="lead">Κάθε συνεδρία έχει σταθερή διάρκεια και σταθερό κόστος, που συμφωνούνται από την αρχή. Δεν υπάρχουν κρυφές χρεώσεις ούτε πακέτα με δέσμευση.</p>
+      </div>
+
+      <div class="grid grid-3" id="servicesGrid"></div>
+
+      <div class="grid grid-2" style="margin-top:3rem">
+        <div class="card">
+          <h3>Πλαίσιο συνεργασίας</h3>
+          <ul class="small" style="color:var(--ink-2);padding-left:1.1rem;line-height:1.9">
+            <li>Συνεδρίες συνήθως μία φορά την εβδομάδα, ίδια μέρα και ώρα</li>
+            <li>Ακύρωση χωρίς χρέωση έως 24 ώρες πριν</li>
+            <li>Απόδειξη παροχής υπηρεσιών για κάθε συνεδρία</li>
+            <li>Αποτίμηση πορείας κάθε 8–10 συνεδρίες</li>
+            <li>Δυνατότητα διακοπής οποιαδήποτε στιγμή — με μία συνεδρία κλεισίματος</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Πληρωμή</h3>
+          <p class="small muted">Στο τέλος κάθε συνεδρίας, με μετρητά, κάρτα ή τραπεζική μεταφορά. Για τις online συνεδρίες η εξόφληση γίνεται πριν από τη συνεδρία.</p>
+          <hr class="divider" style="margin:1.25rem 0">
+          <h3 style="font-size:1.05rem">Μειωμένο κόστος</h3>
+          <p class="small muted">Κρατώ έναν μικρό αριθμό θέσεων με μειωμένη χρέωση για φοιτητές και ανέργους. Ρώτησέ με στην πρώτη επικοινωνία — δεν χρειάζεται να δικαιολογηθείς.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:3.5rem">
+        <p class="eyebrow">Συχνές ερωτήσεις</p>
+        <h2 style="margin-bottom:2rem">Πριν κλείσεις ραντεβού</h2>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΕΡΕΥΝΑ ══════════════════════════════════════════════════════════ -->
+<section class="page" id="page-erevna">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Έρευνα</p>
+        <h2>Τι δείχνουν τα δεδομένα</h2>
+        <p class="lead">Σύντομες αποδόσεις δημοσιευμένων μετα-αναλύσεων και ανασκοπήσεων, με το τι σημαίνει η καθεμιά για τη δουλειά μας. Κάθε κάρτα παραπέμπει στην πρωτότυπη εργασία.</p>
+      </div>
+
+      <div class="filters" id="researchFilters"></div>
+      <div class="grid grid-3" id="researchGrid"></div>
+
+      <div class="note" style="margin-top:2.5rem">
+        <strong>Πώς να τα διαβάσεις.</strong> Μια μετα-ανάλυση δείχνει τι συμβαίνει κατά μέσο όρο σε πολλούς ανθρώπους — όχι τι θα συμβεί σε σένα. Χρησιμεύει για να διαλέξουμε από πού ξεκινάμε, όχι για να προβλέψουμε την πορεία σου.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΕΡΓΑΛΕΙΑ ════════════════════════════════════════════════════════ -->
+<section class="page" id="page-ergaleia">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Εργαλεία ηρεμίας</p>
+        <h2>Ανάσα, γείωση, αυτοπαρατήρηση</h2>
+        <p class="lead">Δωρεάν, χωρίς λογαριασμό. Όλα τρέχουν στη συσκευή σου — τίποτα δεν αποθηκεύεται και τίποτα δεν αποστέλλεται.</p>
+      </div>
+
+      <div class="note note--warn" style="margin-bottom:2.5rem">
+        <strong>Αν κινδυνεύεις τώρα, μη μείνεις εδώ.</strong> Κάλεσε <a href="tel:112"><b>112</b></a> ή τη γραμμή παρέμβασης για την αυτοκτονία <a href="tel:1018"><b>1018</b></a> (24/7). Τα εργαλεία αυτής της σελίδας δεν αντικαθιστούν επείγουσα βοήθεια ούτε ψυχοθεραπεία.
+      </div>
+
+      <!-- αναπνοή -->
+      <div class="breather">
+        <div class="breather__stage" id="breathStage" role="region" aria-label="Καθοδηγούμενη αναπνοή">
+          <div class="orb">
+            <svg class="orb__svg" viewBox="0 0 200 200" aria-hidden="true">
+              <circle class="orb__track" cx="100" cy="100" r="94"/>
+              <circle class="orb__prog"  id="orbProg" cx="100" cy="100" r="94"/>
+            </svg>
+            <div class="orb__core" id="orbCore">
+              <div class="orb__label">
+                <span class="orb__phase" id="orbPhase">Έτοιμη;</span>
+                <span class="orb__count" id="orbCount">—</span>
+              </div>
+            </div>
+          </div>
+          <p class="orb__hint" id="orbHint">Κάθισε κάπου σταθερά.</p>
+
+          <div class="breather__readout">
+            <div class="readout"><b id="roTime">00:00</b><span>χρόνος</span></div>
+            <div class="readout"><b id="roCycles">0</b><span>κύκλοι</span></div>
+            <div class="readout"><b id="roRate">6</b><span>ανά λεπτό</span></div>
+          </div>
+
+          <div class="breather__controls">
+            <button class="btn btn--lg" id="breathPlay"></button>
+            <button class="btn btn--ghost" id="breathReset">Μηδενισμός</button>
+          </div>
+          <p class="tiny muted center" style="position:relative;z-index:1;margin:0">
+            Στον υπολογιστή, το πλήκτρο διαστήματος ξεκινά και σταματά.
+          </p>
+        </div>
+
+        <aside>
+          <h3>Ρυθμός</h3>
+          <div class="pattern-list" id="patternList"></div>
+
+          <h3 style="margin-top:2rem">Διάρκεια</h3>
+          <div class="filters" id="goalList" style="margin-bottom:1rem"></div>
+
+          <h3 style="margin-top:1.5rem">Ρυθμίσεις</h3>
+          <div class="field-row">
+            <label for="optSound">Ήχος<span class="hint">Απαλό σήμα σε κάθε αλλαγή φάσης</span></label>
+            <span class="switch"><input type="checkbox" id="optSound"><i></i></span>
+          </div>
+          <div class="field-row">
+            <label for="optHaptics">Δόνηση<span class="hint">Μόνο σε κινητά που την υποστηρίζουν</span></label>
+            <span class="switch"><input type="checkbox" id="optHaptics" checked><i></i></span>
+          </div>
+
+          <div class="note" style="margin-top:1.5rem">
+            <strong>Αν ζαλιστείς, σταμάτα.</strong> Επίστρεψε σε φυσιολογική αναπνοή και δοκίμασε πιο σύντομο μοτίβο. Η αργή αναπνοή δεν είναι κατάλληλη για όλους — αν έχεις αναπνευστικό ή καρδιολογικό πρόβλημα, ρώτησε πρώτα τον γιατρό σου.
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- γείωση -->
+  <div class="section section--tint">
+    <div class="wrap">
+      <div class="grid grid-sidebar">
+        <div>
+          <p class="eyebrow">Γείωση</p>
+          <h2>5-4-3-2-1</h2>
+          <p class="lead">Όταν το μυαλό τρέχει μπροστά, οι αισθήσεις είναι ο πιο σύντομος δρόμος πίσω στο τώρα. Πάρε τα βήματα με τη σειρά, χωρίς βιασύνη.</p>
+          <div style="display:flex;align-items:center;gap:1rem;margin-top:1.5rem">
+            <div class="meter" style="flex:1"><i id="groundProg" style="width:0"></i></div>
+            <b class="small" id="groundCount">0/5</b>
+          </div>
+          <p style="margin-top:1.25rem"><button class="btn btn--ghost" id="groundReset">Καθάρισε</button></p>
+          <p class="tiny muted">Όσα γράφεις μένουν στη μνήμη του browser σου και χάνονται μόλις ανανεώσεις τη σελίδα.</p>
+        </div>
+        <div class="ground" id="groundList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ερωτηματολόγια -->
+  <div class="section">
+    <div class="wrap-narrow">
+      <p class="eyebrow">Αυτοπαρατήρηση</p>
+      <h2>Δύο σύντομα ερωτηματολόγια</h2>
+      <p class="lead">Το GAD-7 και το PHQ-9 είναι διεθνώς σταθμισμένα εργαλεία διαλογής. Δίνουν έναν αριθμό — όχι διάγνωση.</p>
+
+      <div class="filters" id="quizTabs" style="margin-top:2rem"></div>
+      <div class="card">
+        <p class="small muted" id="quizIntro"></p>
+        <div id="quizForm"></div>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem">
+          <button class="btn" id="quizScore">Δες το αποτέλεσμα</button>
+          <button class="btn btn--ghost" id="quizClear">Καθάρισε</button>
+        </div>
+
+        <div id="quizResult" hidden style="margin-top:1.5rem">
+          <div class="score">
+            <span class="small muted">Σκορ</span>
+            <span class="score__num" id="quizScoreNum">—</span>
+            <div class="meter"><i id="quizMeter" style="width:0"></i></div>
+            <b id="quizBand"></b>
+            <p class="small muted" id="quizBandNote" style="margin:0"></p>
+          </div>
+          <div class="note note--warn" id="quizRisk" hidden style="margin-top:1rem">
+            <strong>Απάντησες θετικά στην ερώτηση για σκέψεις θανάτου ή αυτοτραυματισμού.</strong>
+            Αυτό αξίζει να το πεις σε κάποιον σήμερα — όχι κάποια στιγμή. Γραμμή παρέμβασης για την αυτοκτονία <a href="tel:1018"><b>1018</b></a> (24/7), ή <a href="tel:112"><b>112</b></a> αν κινδυνεύεις τώρα.
+          </div>
+          <p class="tiny muted" style="margin-top:1rem">Το αποτέλεσμα δεν αποθηκεύεται πουθενά. Αν σε ανησυχεί, φέρ' το στην πρώτη μας συνάντηση — είναι χρήσιμη αφετηρία.</p>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:2rem">
+        <strong>Τι δεν είναι αυτό.</strong> Δεν είναι διάγνωση και δεν αντικαθιστά κλινική αξιολόγηση. Ένα υψηλό σκορ δεν σημαίνει ότι έχεις διαταραχή· ένα χαμηλό δεν σημαίνει ότι δεν χρειάζεσαι υποστήριξη.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEED ════════════════════════════════════════════════════════════ -->
+<section class="page" id="page-feed">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Feed</p>
+        <h2>Αντί για blog</h2>
+        <p class="lead">Σύντομα, πρακτικά κείμενα και σχεδιαγράμματα, εκεί που τα διαβάζει ο κόσμος. Ακολούθησέ με στο <a href="#" data-ig-url data-ig-handle target="_blank" rel="noopener" style="color:var(--accent);font-weight:600"></a>.</p>
+      </div>
+      <div class="feed-grid" id="feedGrid"></div>
+      <p style="margin-top:2rem">
+        <a class="btn" href="#" data-ig-url target="_blank" rel="noopener">Άνοιξε το προφίλ στο Instagram</a>
+      </p>
+      <div class="note" style="margin-top:2.5rem">
+        <strong>Το feed δεν είναι συμβουλευτική.</strong> Ό,τι δημοσιεύεται εδώ είναι γενική ψυχοεκπαίδευση. Δεν αντικαθιστά προσωπική αξιολόγηση, και τα σχόλια ή τα μηνύματα δεν είναι εμπιστευτικό πλαίσιο.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΡΑΝΤΕΒΟΥ ════════════════════════════════════════════════════════ -->
+<section class="page" id="page-rantevou">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ραντεβού</p>
+        <h2>Κλείσε μια ώρα</h2>
+        <p class="lead">Τέσσερα βήματα. Το αίτημα επιβεβαιώνεται με email εντός 24 ωρών — η ώρα δεσμεύεται μόνο μετά την επιβεβαίωση.</p>
+      </div>
+
+      <div class="booking">
+        <div class="card" id="bookWizard">
+          <ol class="steps" id="bookSteps"></ol>
+
+          <!-- 1 -->
+          <div class="step is-active">
+            <h3>Τι σε ενδιαφέρει;</h3>
+            <p class="muted">Αν δεν είσαι σίγουρος, διάλεξε την πρώτη συνάντηση γνωριμίας.</p>
+            <div class="choice-grid" id="bookServices"></div>
+          </div>
+
+          <!-- 2 -->
+          <div class="step">
+            <h3>Online ή από κοντά;</h3>
+            <p class="muted">Και τα δύο έχουν την ίδια διάρκεια, το ίδιο κόστος και το ίδιο πλαίσιο.</p>
+            <div class="choice-grid choice-grid--2" id="bookModes"></div>
+            <div style="display:flex;gap:.7rem;margin-top:1.75rem">
+              <button class="btn btn--ghost" data-book-back>Πίσω</button>
+              <button class="btn" data-book-next>Συνέχεια</button>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="step">
+            <h3>Πότε σε βολεύει;</h3>
+            <p class="muted">Οι διαθέσιμες ημέρες έχουν τελίτσα. Οι ώρες είναι σε ώρα Ελλάδας.</p>
+
+            <div class="cal__head">
+              <span class="cal__month" id="calMonth"></span>
+              <span class="cal__nav">
+                <button class="icon-btn" id="calPrev" aria-label="Προηγούμενος μήνας">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+                </button>
+                <button class="icon-btn" id="calNext" aria-label="Επόμενος μήνας">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+                </button>
+              </span>
+            </div>
+            <div class="cal__grid" id="calGrid"></div>
+
+            <h4 style="margin:1.75rem 0 .25rem;font-size:1rem">Ώρες</h4>
+            <p class="small muted" id="slotsDay" style="margin-bottom:.9rem">—</p>
+            <div class="slots" id="bookSlots"></div>
+
+            <div style="display:flex;gap:.7rem;margin-top:1.75rem">
+              <button class="btn btn--ghost" data-book-back>Πίσω</button>
+              <button class="btn" data-book-next>Συνέχεια</button>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="step">
+            <h3>Τα στοιχεία σου</h3>
+            <p class="muted">Χρειάζομαι το ελάχιστο για να επιβεβαιώσω το ραντεβού.</p>
+
+            <form id="bookForm" novalidate>
+              <div class="grid grid-2" style="gap:0 1rem">
+                <div class="field">
+                  <label for="fName">Ονοματεπώνυμο <span class="req">*</span></label>
+                  <input class="input" type="text" id="fName" autocomplete="name">
+                  <span class="err">Συμπλήρωσε το όνομά σου.</span>
+                </div>
+                <div class="field">
+                  <label for="fEmail">Email <span class="req">*</span></label>
+                  <input class="input" type="email" id="fEmail" autocomplete="email">
+                  <span class="err">Χρειάζομαι έγκυρο email για την επιβεβαίωση.</span>
+                </div>
+                <div class="field">
+                  <label for="fPhone">Τηλέφωνο</label>
+                  <input class="input" type="tel" id="fPhone" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="fFirst">Πρώτη φορά σε ψυχοθεραπεία;</label>
+                  <select class="input" id="fFirst">
+                    <option>Ναι, πρώτη φορά</option>
+                    <option>Έχω ξανακάνει στο παρελθόν</option>
+                    <option>Κάνω αυτή την περίοδο</option>
+                    <option>Προτιμώ να μην πω</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="fNote">Θέλεις να μου πεις κάτι από τώρα;</label>
+                <textarea id="fNote" placeholder="Προαιρετικά — μια-δυο γραμμές για το τι σε φέρνει εδώ."></textarea>
+              </div>
+
+              <div class="field" id="consentWrap">
+                <label class="check">
+                  <input type="checkbox" id="fConsent">
+                  <span>Συναινώ στην επεξεργασία των στοιχείων μου αποκλειστικά για τον προγραμματισμό του ραντεβού. <a href="#/aporrito" style="color:var(--accent)">Πολιτική απορρήτου</a> <span class="req">*</span></span>
+                </label>
+                <span class="err">Χρειάζομαι τη συγκατάθεσή σου για να προχωρήσω.</span>
+              </div>
+
+              <p class="tiny muted">Μη γράφεις ευαίσθητα ιατρικά δεδομένα σε αυτή τη φόρμα. Θα τα συζητήσουμε στη συνεδρία.</p>
+            </form>
+
+            <div style="display:flex;gap:.7rem;margin-top:1.5rem;flex-wrap:wrap">
+              <button class="btn btn--ghost" data-book-back>Πίσω</button>
+              <button class="btn" id="bookSubmit">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+                <span>Στείλε το αίτημα</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="step">
+            <div class="done">
+              <div class="done__tick">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+              </div>
+              <h3>Το αίτημα ετοιμάστηκε</h3>
+              <p class="lead" id="doneWhen">—</p>
+              <p class="muted" id="doneWhat">—</p>
+              <p class="small muted" style="max-width:52ch;margin:1.25rem auto 0">
+                Θα λάβεις επιβεβαίωση με email εντός 24 ωρών. Μέχρι τότε η ώρα δεν είναι δεσμευμένη. Αν δεν άνοιξε το πρόγραμμα email σου, χρησιμοποίησε το κουμπί παρακάτω.
+              </p>
+              <div class="done__actions">
+                <a class="btn" id="doneMail" href="#">Άνοιξε το email</a>
+                <button class="btn btn--ghost" id="doneIcs">Πρόσθεσε στο ημερολόγιο</button>
+                <button class="btn btn--ghost" id="doneCopy">Αντιγραφή στοιχείων</button>
+              </div>
+              <p style="margin-top:1.5rem"><button class="btn btn--soft" id="doneAgain">Νέο ραντεβού</button></p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card summary">
+          <h3>Η κράτησή σου</h3>
+          <div id="bookSummary"></div>
+          <hr class="divider" style="margin:1.5rem 0">
+          <p class="tiny muted">Ακύρωση χωρίς χρέωση έως 24 ώρες πριν. Για επείγοντα, μη χρησιμοποιείς αυτή τη φόρμα — κάλεσε <a href="tel:112" style="color:var(--clay);font-weight:600">112</a>.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΕΠΙΚΟΙΝΩΝΙΑ ═════════════════════════════════════════════════════ -->
+<section class="page" id="page-epikoinonia">
+  <div class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Επικοινωνία</p>
+        <h2>Πού θα με βρεις</h2>
+        <p class="lead">Απαντώ σε email και μηνύματα εντός μίας εργάσιμης ημέρας. Κατά τη διάρκεια των συνεδριών το τηλέφωνο είναι κλειστό.</p>
+      </div>
+
+      <div class="grid grid-sidebar">
+        <div>
+          <ul class="contact-list" id="contactList"></ul>
+
+          <h3 style="margin-top:2.5rem">Ώρες γραφείου</h3>
+          <ul class="hours" id="hoursList"></ul>
+
+          <div class="note note--warn" style="margin-top:2rem">
+            <strong>Δεν είναι γραμμή έκτακτης ανάγκης.</strong> Αν χρειάζεσαι άμεση βοήθεια, κάλεσε <a href="tel:112"><b>112</b></a> ή τη γραμμή <a href="tel:1018"><b>1018</b></a>. Δες όλες τις γραμμές από το κουμπί κάτω δεξιά.
+          </div>
+        </div>
+
+        <div>
+          <div class="map">
+            <div class="map__ph">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <b class="small">Χάρτης</b>
+              <p class="tiny muted" style="max-width:34ch">Πρόσθεσε εδώ το embed του Google Maps — δες το README (ενότητα «Χάρτης»).</p>
+            </div>
+          </div>
+          <p class="small muted" style="margin-top:1rem">Το γραφείο είναι προσβάσιμο με ασανσέρ. Πες μου από πριν αν χρειάζεσαι κάποια διευκόλυνση.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ΑΠΟΡΡΗΤΟ ════════════════════════════════════════════════════════ -->
+<section class="page" id="page-aporrito">
+  <div class="section">
+    <div class="wrap-narrow">
+      <p class="eyebrow">Νομικά</p>
+      <h2>Πολιτική απορρήτου</h2>
+      <div class="note note--warn" style="margin-bottom:2rem">
+        <strong>Πρότυπο κείμενο.</strong> Πρέπει να ελεγχθεί και να προσαρμοστεί από νομικό πριν τη δημοσίευση. Δεν αποτελεί νομική συμβουλή.
+      </div>
+
+      <h3>Υπεύθυνος επεξεργασίας</h3>
+      <p class="small"><span data-p-name>—</span>, <span data-p-role>—</span>. Επικοινωνία: <a data-contact-email href="#">—</a>.</p>
+
+      <h3>Τι δεδομένα συλλέγονται</h3>
+      <p class="small">Μέσα από τη φόρμα ραντεβού: ονοματεπώνυμο, email, προαιρετικά τηλέφωνο, και ό,τι γράψεις στο πεδίο σημείωσης. Χρησιμοποιούνται αποκλειστικά για τον προγραμματισμό και την επιβεβαίωση του ραντεβού.</p>
+
+      <h3>Τι δεν συλλέγεται</h3>
+      <p class="small">Τα εργαλεία της σελίδας «Εργαλεία ηρεμίας» — η αναπνοή, η γείωση 5-4-3-2-1 και τα ερωτηματολόγια GAD-7 / PHQ-9 — εκτελούνται εξ ολοκλήρου στη συσκευή σου. Οι απαντήσεις και τα σκορ δεν αποστέλλονται, δεν καταγράφονται και δεν αποθηκεύονται. Το site δεν χρησιμοποιεί cookies παρακολούθησης ούτε εργαλεία διαφημιστικής στόχευσης.</p>
+
+      <h3>Χρόνος διατήρησης</h3>
+      <p class="small">Τα στοιχεία επικοινωνίας διατηρούνται όσο διαρκεί η συνεργασία και για όσο ορίζει η φορολογική νομοθεσία για τα παραστατικά. Το κλινικό αρχείο τηρείται σύμφωνα με τον κώδικα δεοντολογίας του επαγγέλματος.</p>
+
+      <h3>Τα δικαιώματά σου</h3>
+      <p class="small">Έχεις δικαίωμα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού και φορητότητας των δεδομένων σου, καθώς και δικαίωμα εναντίωσης. Για να τα ασκήσεις, στείλε email στη διεύθυνση παραπάνω. Μπορείς επίσης να υποβάλεις καταγγελία στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (dpa.gr).</p>
+
+      <h3>Εχεμύθεια συνεδριών</h3>
+      <p class="small">Όσα λέγονται στη συνεδρία καλύπτονται από επαγγελματικό απόρρητο. Οι εξαιρέσεις είναι νομικά ορισμένες: άμεσος και σοβαρός κίνδυνος για τη ζωή σου ή τη ζωή τρίτου, και εισαγγελική εντολή. Στην κλινική εποπτεία τα περιστατικά συζητούνται πάντα χωρίς αναγνωριστικά στοιχεία.</p>
+
+      <h3>Τρίτα μέρη</h3>
+      <p class="small">Το site φορτώνει γραμματοσειρές από τη Google Fonts. Οι online συνεδρίες γίνονται μέσω πλατφόρμας βιντεοκλήσης με κρυπτογράφηση — το όνομα της πλατφόρμας αναφέρεται στο έντυπο συναίνεσης της πρώτης συνεδρίας.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ SOS ═════════════════════════════════════════════════════════════ -->
+<button class="sos-fab" id="sosOpen" aria-label="Γραμμές άμεσης βοήθειας">
+  <i aria-hidden="true"></i>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5 5 4 4M15 15l4 4M19 5l-4 4M9 15l-4 4"/></svg>
+  <span class="lbl">Χρειάζομαι βοήθεια</span>
+</button>
+
+<div class="modal" id="sos" role="dialog" aria-modal="true" aria-labelledby="sosTitle">
+  <div class="modal__box">
+    <div class="modal__top">
+      <div>
+        <h3 id="sosTitle" style="margin-bottom:.2rem">Άμεση βοήθεια</h3>
+        <p class="small muted" style="margin:0">Δωρεάν γραμμές στην Ελλάδα. Αν κινδυνεύεις τώρα, κάλεσε 112.</p>
+      </div>
+      <button class="icon-btn" id="sosClose" aria-label="Κλείσιμο">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul class="sos-list" id="sosList"></ul>
+    <p class="tiny muted" style="margin-top:1.25rem">Αν προτιμάς να μη μιλήσεις, πήγαινε στα <a href="#/ergaleia" style="color:var(--accent)">εργαλεία ηρεμίας</a> και ξεκίνα μια αναπνοή. Δεν είσαι μόνος σου σε αυτό.</p>
+  </div>
+</div>
+
+<!-- ══ footer ══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#/arxiki" style="margin-bottom:1rem">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35"/>
+            <circle cx="16" cy="16" r="9"  fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+            <circle cx="16" cy="16" r="4.2" fill="currentColor"/>
+          </svg>
+          <span>αισθάνομαι<small>ψυχοθεραπεία</small></span>
+        </a>
+        <p class="small muted" style="max-width:38ch"><span data-p-name>—</span> · <span data-p-role>—</span><br><span data-p-licence>—</span></p>
+        <div class="socials" id="socials"></div>
+      </div>
+
+      <div>
+        <h4>Σελίδες</h4>
+        <ul>
+          <li><a href="#/profil">Προφίλ</a></li>
+          <li><a href="#/ypiresies">Υπηρεσίες & τιμές</a></li>
+          <li><a href="#/erevna">Έρευνα</a></li>
+          <li><a href="#/ergaleia">Εργαλεία ηρεμίας</a></li>
+          <li><a href="#/feed">Feed</a></li>
+          <li><a href="#/rantevou">Κλείσε ραντεβού</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Επικοινωνία</h4>
+        <ul>
+          <li><a data-contact-email href="#">—</a></li>
+          <li><a data-contact-phone href="#">—</a></li>
+          <li><a href="#/epikoinonia">Διεύθυνση & ώρες</a></li>
+          <li><a href="#/aporrito">Πολιτική απορρήτου</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> αισθάνομαι · Όλα τα δικαιώματα διατηρούνται</span>
+      <span>Το περιεχόμενο του site είναι ενημερωτικό και δεν αντικαθιστά εξατομικευμένη αξιολόγηση.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/site.js"></script>
+<script src="assets/js/breathe.js"></script>
+<script src="assets/js/screening.js"></script>
+<script src="assets/js/booking.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
