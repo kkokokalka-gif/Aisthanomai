@@ -105,9 +105,8 @@
   /* ── 1 · υπηρεσία ─────────────────────────────────────────────────── */
   function paintServices() {
     $("#bookServices").innerHTML = S.services.map(function (sv) {
-      var price = sv.price === 0 ? sv.priceLabel : sv.price + "€";
       return '<button class="choice' + (st.service && st.service.id === sv.id ? " is-on" : "") + '" data-sv="' + sv.id + '">' +
-        "<b>" + window.esc(sv.t) + "<span>" + window.esc(price) + " · " + sv.mins + "′</span></b>" +
+        "<b>" + window.esc(sv.t) + "<span>" + sv.mins + "′</span></b>" +
         "<p>" + window.esc(sv.d) + "</p></button>";
     }).join("");
   }
@@ -186,11 +185,7 @@
     $("#bookSummary").innerHTML = rows.length
       ? "<dl>" + rows.map(function (r) {
           return "<dt>" + window.esc(r[0]) + "</dt><dd>" + window.esc(r[1]) + "</dd>";
-        }).join("") + "</dl>" +
-        (st.service
-          ? '<div class="summary__total"><span class="small muted">Κόστος</span><b>' +
-            window.esc(st.service.price === 0 ? st.service.priceLabel : st.service.price + "€") + "</b></div>"
-          : "")
+        }).join("") + "</dl>"
       : '<p class="small muted" style="margin:0">Διάλεξε υπηρεσία για να ξεκινήσουμε.</p>';
   }
 
@@ -232,7 +227,6 @@
       "Τρόπος: " + MODE_INFO[st.mode].l,
       "Ημερομηνία: " + fmtLong(st.date),
       "Ώρα: " + st.time + " (" + st.service.mins + " λεπτά)",
-      "Κόστος: " + (st.service.price === 0 ? st.service.priceLabel : st.service.price + "€"),
       "",
       "Ονοματεπώνυμο: " + st.form.name,
       "Email: " + st.form.email,

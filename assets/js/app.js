@@ -75,6 +75,34 @@
   }
   window.toast = toast;
 
+  /* ── κεφαλαία χωρίς τόνους ─────────────────────────────────────────────
+     Το text-transform: uppercase δεν αφαιρεί τον τόνο σε κάθε browser, οπότε
+     γράφουμε το κείμενο ήδη κεφαλαίο και άτονο. Τα διαλυτικά μένουν. */
+  var CAPS_SEL = ".eyebrow, .brand small, .readout span, .summary dt, .footer h4, .hero__portrait span";
+  function toCaps(t) {
+    return t.toLocaleUpperCase("el-GR").normalize("NFD").replace(/[\u0300\u0301]/g, "").normalize("NFC");
+  }
+  function capsFix(root) {
+    $$(CAPS_SEL, root || document).forEach(function (el) {
+      var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      var n;
+      while ((n = w.nextNode())) {
+        var up = toCaps(n.nodeValue);
+        if (up !== n.nodeValue) n.nodeValue = up;
+      }
+    });
+  }
+  function watchCaps() {
+    capsFix();
+    if (!window.MutationObserver) return;
+    var queued = false;
+    new MutationObserver(function () {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () { queued = false; capsFix(); });
+    }).observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+
   /* ── θέμα ───────────────────────────────────────────────────────────── */
   var THEME_KEY = "aisth.theme";
   function readTheme() {
@@ -161,7 +189,7 @@
     $("#navToggle").addEventListener("click", openDrawer);
     $("#drawerClose").addEventListener("click", closeDrawer);
     $("#drawer").addEventListener("click", function (e) { if (e.target === this) closeDrawer(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeDrawer(); closeSos(); } });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDrawer(); });
   }
 
   /* ── sticky header ──────────────────────────────────────────────────── */
@@ -192,33 +220,7 @@
     });
   }
 
-  /* ── SOS modal ──────────────────────────────────────────────────────── */
-  function openSos() {
-    $("#sos").classList.add("is-open");
-    document.body.classList.add("is-locked");
-    $("#sosClose").focus();
-  }
-  function closeSos() {
-    var m = $("#sos");
-    if (m && m.classList.contains("is-open")) {
-      m.classList.remove("is-open");
-      document.body.classList.remove("is-locked");
-    }
-  }
-  function initSos() {
-    $("#sosOpen").addEventListener("click", openSos);
-    $("#sosClose").addEventListener("click", closeSos);
-    $("#sos").addEventListener("click", function (e) { if (e.target === this) closeSos(); });
-    $("#sosList").innerHTML = S.crisis.map(function (c) {
-      return '<li><div><b>' + esc(c.t) + '</b><span>' + esc(c.s) + '</span></div>' +
-             '<a href="tel:' + esc(c.n) + '">' + esc(c.n) + "</a></li>";
-    }).join("");
-  }
-
   /* ── rendering: υπηρεσίες ───────────────────────────────────────────── */
-  function priceOf(sv) {
-    return sv.price === 0 ? sv.priceLabel : sv.price + "€";
-  }
   function renderServices() {
     var html = S.services.map(function (sv) {
       return '<article class="card card--lift service reveal">' +
@@ -229,8 +231,7 @@
         "<h3>" + esc(sv.t) + "</h3><p>" + esc(sv.d) + "</p>" +
         "<ul>" + sv.bullets.map(function (b) { return "<li>" + esc(b) + "</li>"; }).join("") + "</ul>" +
         '<div class="service__foot">' +
-          '<span class="service__price">' + esc(priceOf(sv)) +
-            (sv.price ? ' <small>' + esc(sv.priceLabel) + "</small>" : "") + "</span>" +
+          '<span class="small muted">' + sv.mins + " λεπτά</span>" +
           '<a class="btn btn--soft" href="#/rantevou" data-service="' + sv.id + '">Κλείσε ' + icon("arrow") + "</a>" +
         "</div></article>";
     }).join("");
@@ -391,9 +392,9 @@
     initTheme();
     initHeader();
     initDrawer();
-    initSos();
     initRouter();
     observeReveals();
+    watchCaps();
 
     if (window.Breather)  window.Breather.init();
     if (window.Screening) window.Screening.init();
