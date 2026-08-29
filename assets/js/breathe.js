@@ -108,7 +108,7 @@
     el.play.innerHTML = window.icon("play") + "<span>Ξεκίνα</span>";
     el.core.classList.remove("is-big");
     el.core.style.setProperty("--phase-dur", ".4s");
-    el.phase.textContent = "Έτοιμη;";
+    el.phase.textContent = "Ξεκινάμε;";
     el.count.textContent = "—";
     el.hint.textContent = "Κάθισε κάπου σταθερά. Πάτα «Ξεκίνα».";
     el.prog.style.strokeDashoffset = CIRC;
